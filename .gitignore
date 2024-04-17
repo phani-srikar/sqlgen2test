@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-amplify
+# amplify
 node_modules
 .amplify
 amplifyconfiguration*
