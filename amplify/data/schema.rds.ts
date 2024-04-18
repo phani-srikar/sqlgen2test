@@ -36,27 +36,35 @@ export const schema = configure({
     "Blog": a.model({
         id: a.string().required(),
         content: a.string(),
-        authors: a.string().array()
+        authors: a.string().array(),
+        createdAt: a.datetime(),
+        updatedAt: a.datetime()
     }).identifier([
         "id"
     ]),
     "Post": a.model({
         id: a.string().required(),
         content: a.string(),
-        blogId: a.string()
+        blogId: a.string(),
+        createdAt: a.datetime(),
+        updatedAt: a.datetime()
     }).identifier([
         "id"
     ]),
     "Profile": a.model({
         id: a.string().required(),
         details: a.string(),
-        userId: a.string()
+        userId: a.string(),
+        createdAt: a.datetime(),
+        updatedAt: a.datetime()
     }).identifier([
         "id"
     ]),
     "User": a.model({
         id: a.string().required(),
-        name: a.string()
+        name: a.string(),
+        createdAt: a.datetime(),
+        updatedAt: a.datetime()
     }).identifier([
         "id"
     ])
