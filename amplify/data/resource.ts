@@ -20,10 +20,10 @@ const ddbSchema = a.schema({
 */
 
 auroraSchema.setAuthorization((models) => [
-  models.Blog.authorization(allow => [allow.guest()]),
-  models.Post.authorization(allow => [allow.guest()]),
-  models.User.authorization(allow => [allow.guest()]),
-  models.Profile.authorization(allow => [allow.guest()]),
+  models.Blog.authorization(allow => [allow.publicApiKey()]),
+  models.Post.authorization(allow => [allow.publicApiKey()]),
+  models.User.authorization(allow => [allow.publicApiKey()]),
+  models.Profile.authorization(allow => [allow.publicApiKey()]),
   // models.Blog.fields.content.authorization([a.allow.private()]),
   // models.User.fields.name.authorization([a.allow.owner()]),
 ]);
